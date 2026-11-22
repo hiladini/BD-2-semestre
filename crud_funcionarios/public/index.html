@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Funcionários</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <span>Cadastro de Funcionários</span>
+      <button id="new" type="button">Incluir</button>
+    </header>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th><th>Função</th><th>Salário</th>
+            <th class="acao">Editar</th><th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <p id="mensagem" class="mensagem"></p>
+    </div>
+  </main>
+
+  <div class="modal-container" id="modal">
+    <form class="modal" id="formFuncionario">
+      <h2 id="tituloModal">Novo funcionário</h2>
+      <label for="m-nome">Nome</label>
+      <input id="m-nome" type="text" maxlength="100" required>
+      <label for="m-funcao">Função</label>
+      <input id="m-funcao" type="text" maxlength="100" required>
+      <label for="m-salario">Salário</label>
+      <input id="m-salario" type="number" min="0" step="0.01" required>
+      <button id="btnSalvar" type="submit">Salvar</button>
+      <button id="btnCancelar" class="cancelar" type="button">Cancelar</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
